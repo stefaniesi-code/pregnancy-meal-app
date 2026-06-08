@@ -7,6 +7,7 @@ Features:
 - Pregnancy-stage meal planning
 - Pantry-based recipe matching
 - Three-day menu generation
+- Rerollable menu combinations from an expanded recipe pool
 - Pregnancy food safety lookup
 - Shopping list generation
 - Listeria and caffeine limit notes

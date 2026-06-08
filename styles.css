@@ -220,6 +220,15 @@ input[type="search"] {
   accent-color: var(--sage-dark);
 }
 
+.primary-action {
+  min-height: 44px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--sage-dark);
+  color: white;
+  font-weight: 900;
+}
+
 .results {
   padding: 18px;
 }

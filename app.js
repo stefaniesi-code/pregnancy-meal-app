@@ -93,6 +93,49 @@ const mealBank = {
   }
 };
 
+const extraMeals = {
+  first: [
+    meal("早餐", "紫薯牛奶燕麦糊", 14, ["钙", "能量", "温和"], "紫薯蒸熟压泥，和燕麦、巴氏杀菌牛奶煮成糊，口感柔和。", ["紫薯", "燕麦", "牛奶"]),
+    meal("早餐", "番茄鸡蛋软面", 15, ["胆碱", "补水"], "番茄煮软后下细面和全熟蛋花，适合早晨胃口弱的时候。", ["番茄", "鸡蛋", "细面"]),
+    meal("午餐", "豆腐青菜鸡肉粥", 20, ["蛋白质", "叶酸"], "鸡肉丝、豆腐和青菜煮粥，温热软糯，减少油腻感。", ["鸡肉", "豆腐", "青菜", "米饭"]),
+    meal("午餐", "牛油果鹰嘴豆吐司", 12, ["叶酸", "植物蛋白"], "熟鹰嘴豆压泥配牛油果，抹全麦吐司，少量柠檬提味。", ["鹰嘴豆", "牛油果", "全麦吐司", "柠檬"]),
+    meal("加餐", "香蕉苏打饼小盘", 5, ["缓解反胃", "能量"], "香蕉切片配苏打饼，适合少量多餐。", ["香蕉", "苏打饼"]),
+    meal("加餐", "蒸蛋羹", 12, ["胆碱", "蛋白质"], "鸡蛋加温水蒸熟，口感嫩滑，避免半熟蛋。", ["鸡蛋"]),
+    meal("晚餐", "番茄鸡肉土豆炖菜", 25, ["蛋白质", "维 C"], "鸡肉、土豆和番茄炖到软烂，味道温和。", ["鸡肉", "土豆", "番茄"]),
+    meal("晚餐", "菠菜豆腐米线汤", 18, ["叶酸", "钙"], "豆腐、菠菜和米线煮汤，蔬菜彻底加热。", ["菠菜", "豆腐", "米线"])
+  ],
+  second: [
+    meal("早餐", "牛奶燕麦鸡蛋杯", 13, ["钙", "胆碱"], "燕麦、巴氏杀菌牛奶和全熟鸡蛋搭配，饱腹又快手。", ["燕麦", "牛奶", "鸡蛋"]),
+    meal("早餐", "豆浆全麦蔬菜卷", 10, ["植物蛋白", "叶酸"], "强化豆浆配全麦饼，卷入焯熟菠菜和彩椒。", ["豆浆", "全麦饼", "菠菜", "彩椒"]),
+    meal("午餐", "牛肉菠菜糙米碗", 24, ["铁", "蛋白质"], "瘦牛肉、菠菜和糙米组合，搭配橙子帮助铁吸收。", ["瘦牛肉", "菠菜", "糙米", "橙子"]),
+    meal("午餐", "鸡蛋豆腐番茄盖饭", 18, ["胆碱", "钙"], "番茄、豆腐和全熟鸡蛋做成酸甜盖饭。", ["鸡蛋", "豆腐", "番茄", "米饭"]),
+    meal("加餐", "红薯核桃酸奶碗", 10, ["钙", "纤维"], "蒸红薯搭配巴氏杀菌酸奶和核桃，甜度自然。", ["红薯", "酸奶", "核桃"]),
+    meal("加餐", "黄瓜芝麻鹰嘴豆", 8, ["植物蛋白", "镁"], "熟鹰嘴豆、黄瓜丁和芝麻拌匀，清爽补能量。", ["鹰嘴豆", "黄瓜", "芝麻"]),
+    meal("晚餐", "鳕鱼番茄豆腐汤", 20, ["DHA", "钙", "蛋白质"], "低汞鳕鱼、番茄和豆腐煮汤，鱼肉完全熟透。", ["鳕鱼", "番茄", "豆腐"]),
+    meal("晚餐", "虾仁西兰花荞麦饭", 20, ["碘", "叶酸"], "虾仁彻底煮熟，搭配西兰花和荞麦饭。", ["虾仁", "西兰花", "荞麦", "米饭"])
+  ],
+  third: [
+    meal("早餐", "黑芝麻香蕉牛奶糊", 9, ["钙", "镁"], "香蕉、黑芝麻和巴氏杀菌牛奶打成温热糊，少量多餐。", ["香蕉", "黑芝麻", "牛奶"]),
+    meal("早餐", "南瓜鸡蛋软饼", 16, ["胆碱", "能量"], "南瓜泥和鸡蛋做软饼，鸡蛋完全煎熟。", ["南瓜", "鸡蛋", "面粉"]),
+    meal("午餐", "豆腐牛肉青菜汤饭", 22, ["铁", "钙"], "瘦牛肉、豆腐和青菜煮汤，浇在米饭上。", ["瘦牛肉", "豆腐", "青菜", "米饭"]),
+    meal("午餐", "鸡肉蘑菇燕麦咸粥", 21, ["蛋白质", "纤维"], "鸡肉、蘑菇和燕麦煮成咸粥，温和好消化。", ["鸡肉", "蘑菇", "燕麦"]),
+    meal("加餐", "梨子花生酱吐司", 7, ["纤维", "健康脂肪"], "梨片配花生酱和全麦吐司，便捷补能量。", ["梨", "花生酱", "全麦吐司"]),
+    meal("加餐", "毛豆玉米小碗", 10, ["植物蛋白", "纤维"], "毛豆和玉米煮熟后少量调味，适合下午加餐。", ["毛豆", "玉米"]),
+    meal("晚餐", "三文鱼豆腐蔬菜蒸碗", 20, ["DHA", "钙"], "熟三文鱼、豆腐和胡萝卜蒸熟，口感软嫩。", ["三文鱼", "豆腐", "胡萝卜"]),
+    meal("晚餐", "番茄鸡蛋小白菜面", 17, ["胆碱", "补水"], "番茄、全熟蛋和小白菜煮面，晚餐轻负担。", ["番茄", "鸡蛋", "小白菜", "面条"])
+  ],
+  postpartum: [
+    meal("早餐", "芝麻核桃燕麦粥", 15, ["能量", "钙"], "燕麦、芝麻和核桃煮粥，适合产后忙碌早晨。", ["燕麦", "芝麻", "核桃"]),
+    meal("早餐", "鸡蛋青菜汤面", 14, ["胆碱", "补水"], "全熟鸡蛋、青菜和面条煮汤，简单温热。", ["鸡蛋", "青菜", "面条"]),
+    meal("午餐", "鸡肉豆腐杂粮饭", 20, ["蛋白质", "钙"], "鸡肉、豆腐和杂粮饭组合，食材容易备好。", ["鸡肉", "豆腐", "杂粮"]),
+    meal("午餐", "虾仁番茄米粉汤", 18, ["碘", "补水"], "虾仁彻底熟透，和番茄、米粉煮成汤。", ["虾仁", "番茄", "米粉"]),
+    meal("加餐", "红枣牛奶燕麦杯", 8, ["钙", "能量"], "巴氏杀菌牛奶、燕麦和红枣加热，快速补能量。", ["牛奶", "燕麦", "红枣"]),
+    meal("加餐", "豆腐鹰嘴豆小碗", 10, ["植物蛋白", "钙"], "熟鹰嘴豆和豆腐拌成小碗，清淡耐饱。", ["鹰嘴豆", "豆腐"]),
+    meal("晚餐", "鳕鱼南瓜豆腐汤", 22, ["DHA", "钙"], "鳕鱼、南瓜和豆腐同煮，清淡高蛋白。", ["鳕鱼", "南瓜", "豆腐"]),
+    meal("晚餐", "牛肉番茄蔬菜粥", 24, ["铁", "补水"], "瘦牛肉、番茄和青菜熬粥，温热好入口。", ["瘦牛肉", "番茄", "青菜"])
+  ]
+};
+
 const symptomBoosts = {
   nausea: ["姜", "苏打饼", "香蕉", "米粥"],
   iron: ["菠菜", "瘦牛肉", "扁豆", "橙子"],
@@ -125,12 +168,14 @@ const state = {
   diet: "balanced",
   fishCount: 2,
   quickOnly: false,
-  pantry: []
+  pantry: [],
+  planSeed: 0
 };
 
 const stageSelect = document.querySelector("#stage");
 const symptomSelect = document.querySelector("#symptom");
 const pantryInput = document.querySelector("#pantry");
+const rerollPlan = document.querySelector("#rerollPlan");
 const quickOnly = document.querySelector("#quickOnly");
 const mealGrid = document.querySelector("#mealGrid");
 const focusText = document.querySelector("#focusText");
@@ -158,7 +203,7 @@ function renderMeals() {
   const base = mealBank[state.stage];
   const boost = symptomBoosts[state.symptom];
   const pantryMode = state.pantry.length > 0;
-  const sourceDays = pantryMode ? buildPantryDays() : base.days;
+  const sourceDays = pantryMode ? buildPantryDays() : buildStageDays();
   const days = sourceDays.map((plan) => ({
     ...plan,
     meals: plan.meals
@@ -222,16 +267,31 @@ function prepareMeal(item) {
 }
 
 function buildPantryDays() {
-  const slots = ["早餐", "午餐", "加餐", "晚餐"];
   const pool = getAllMeals()
     .map((item) => ({ ...item, score: scoreMeal(item) }))
     .filter((item) => !state.quickOnly || item.minutes <= 20)
     .sort((a, b) => b.score - a.score || a.minutes - b.minutes);
 
+  return buildDaysFromPool(pool);
+}
+
+function buildStageDays() {
+  const pool = getStageMeals(state.stage)
+    .map((item) => ({ ...item, stage: state.stage, score: 0 }))
+    .filter((item) => !state.quickOnly || item.minutes <= 20);
+
+  return buildDaysFromPool(pool);
+}
+
+function buildDaysFromPool(pool) {
+  const slots = ["早餐", "午餐", "加餐", "晚餐"];
   const used = new Set();
   return ["明天", "后天", "第 3 天"].map((label) => {
-    const meals = slots.map((slot) => {
-      const picked = pool.find((item) => item.slot === slot && !used.has(item.title)) || pool.find((item) => !used.has(item.title));
+    const meals = slots.map((slot, slotIndex) => {
+      const candidates = pool.filter((item) => item.slot === slot && !used.has(item.title));
+      const fallback = pool.filter((item) => !used.has(item.title));
+      const list = candidates.length ? candidates : fallback;
+      const picked = list.length ? list[(state.planSeed + slotIndex) % list.length] : null;
       if (picked) {
         used.add(picked.title);
       }
@@ -244,8 +304,12 @@ function buildPantryDays() {
 
 function getAllMeals() {
   return Object.entries(mealBank).flatMap(([stage, plan]) => {
-    return plan.days.flatMap((dayPlan) => dayPlan.meals.map((item) => ({ ...item, stage })));
+    return getStageMeals(stage).map((item) => ({ ...item, stage }));
   });
+}
+
+function getStageMeals(stage) {
+  return mealBank[stage].days.flatMap((dayPlan) => dayPlan.meals).concat(extraMeals[stage] || []);
 }
 
 function scoreMeal(item) {
@@ -300,21 +364,30 @@ function renderSafety() {
 
 stageSelect.addEventListener("change", (event) => {
   state.stage = event.target.value;
+  state.planSeed = 0;
   renderMeals();
 });
 
 symptomSelect.addEventListener("change", (event) => {
   state.symptom = event.target.value;
+  state.planSeed = 0;
   renderMeals();
 });
 
 pantryInput.addEventListener("input", (event) => {
   state.pantry = parsePantry(event.target.value);
+  state.planSeed = 0;
+  renderMeals();
+});
+
+rerollPlan.addEventListener("click", () => {
+  state.planSeed += 1;
   renderMeals();
 });
 
 quickOnly.addEventListener("change", (event) => {
   state.quickOnly = event.target.checked;
+  state.planSeed = 0;
   renderMeals();
 });
 
@@ -323,6 +396,7 @@ document.querySelectorAll(".segment").forEach((button) => {
     document.querySelectorAll(".segment").forEach((item) => item.classList.remove("is-active"));
     button.classList.add("is-active");
     state.diet = button.dataset.diet;
+    state.planSeed = 0;
     renderMeals();
   });
 });
