@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>孕期安心食谱</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-label="孕期安心食谱">
+        <img src="./assets/pregnancy-meals.png" alt="孕期友好的早餐、沙拉、汤和鱼类餐食" />
+        <div class="hero-copy">
+          <p class="eyebrow">孕期食谱 · 营养计划 · 食物安全</p>
+          <h1>孕期安心食谱</h1>
+          <p>
+            按孕期阶段、症状和营养重点生成一天菜单，顺手整理采购清单。
+          </p>
+        </div>
+      </section>
+
+      <section class="planner" aria-label="食谱计划器">
+        <aside class="control-panel" aria-label="筛选条件">
+          <div class="field-group">
+            <label for="stage">孕期阶段</label>
+            <select id="stage">
+              <option value="first">孕早期 1-12 周</option>
+              <option value="second" selected>孕中期 13-27 周</option>
+              <option value="third">孕晚期 28-40 周</option>
+              <option value="postpartum">产后哺乳期</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="symptom">今天最想照顾</label>
+            <select id="symptom">
+              <option value="nausea">反胃/孕吐</option>
+              <option value="iron" selected>补铁和疲劳</option>
+              <option value="constipation">便秘</option>
+              <option value="heartburn">烧心</option>
+              <option value="quick">没时间做饭</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="pantry">我已有的食材</label>
+            <input id="pantry" type="text" placeholder="例如：鸡蛋、番茄、豆腐、菠菜" />
+            <p class="helper-text">输入后会优先用现有食材组合未来三日菜单。</p>
+          </div>
+
+          <div class="field-group">
+            <span class="label-text">饮食偏好</span>
+            <div class="segmented" role="group" aria-label="饮食偏好">
+              <button class="segment is-active" data-diet="balanced" type="button">均衡</button>
+              <button class="segment" data-diet="vegetarian" type="button">素食</button>
+              <button class="segment" data-diet="lowLactose" type="button">少乳糖</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <span class="label-text">本周低汞鱼目标</span>
+            <div class="stepper">
+              <button id="fishMinus" type="button" aria-label="减少鱼类餐次">-</button>
+              <output id="fishCount">2</output>
+              <button id="fishPlus" type="button" aria-label="增加鱼类餐次">+</button>
+            </div>
+          </div>
+
+          <label class="toggle">
+            <input id="quickOnly" type="checkbox" />
+            <span>只看 20 分钟内</span>
+          </label>
+        </aside>
+
+        <section class="results" aria-live="polite">
+          <div class="summary-strip">
+            <div>
+              <span class="metric-label">三日重点</span>
+              <strong id="focusText">铁 + 维 C + 蛋白质</strong>
+            </div>
+            <div>
+              <span class="metric-label">三日备餐用时</span>
+              <strong id="timeText">55 分钟</strong>
+            </div>
+            <div>
+              <span class="metric-label">营养覆盖</span>
+              <strong id="coverageText">8 项</strong>
+            </div>
+          </div>
+
+          <div id="mealGrid" class="meal-grid"></div>
+        </section>
+      </section>
+
+      <section class="knowledge-band">
+        <div class="safety-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Food Safety</p>
+            <h2>食物安全速查</h2>
+          </div>
+          <div class="search-row">
+            <input id="safeSearch" type="search" placeholder="搜索：三文鱼、咖啡、软奶酪..." />
+          </div>
+          <div id="safetyList" class="safety-list"></div>
+        </div>
+
+        <div class="shopping-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Grocery</p>
+            <h2>自动采购清单</h2>
+          </div>
+          <ul id="shoppingList" class="shopping-list"></ul>
+        </div>
+      </section>
+
+      <section class="notes-band">
+        <div class="section-heading">
+          <p class="eyebrow">Nutrition Notes</p>
+          <h2>设计参考</h2>
+        </div>
+        <div class="note-grid">
+          <article>
+            <strong>阶段化</strong>
+            <p>早期照顾恶心和叶酸，中期增加能量与铁，晚期关注钙、蛋白质和消化舒适。</p>
+          </article>
+          <article>
+            <strong>食物安全</strong>
+            <p>避开生食、高汞鱼、未消毒乳制品、酒精和李斯特菌高风险冷藏即食食品。</p>
+          </article>
+          <article>
+            <strong>可落地</strong>
+            <p>每道菜有时间、营养标签、替换建议和一键加入购物清单。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
