@@ -14,7 +14,7 @@
           <p class="eyebrow">孕期食谱 · 营养计划 · 食物安全</p>
           <h1>孕期安心食谱</h1>
           <p>
-            按孕期阶段、症状和营养重点生成一天菜单，顺手整理采购清单。
+            按孕期月份生成早餐、中餐、晚餐和加餐菜单，顺手整理采购清单。
           </p>
         </div>
       </section>
@@ -22,23 +22,16 @@
       <section class="planner" aria-label="食谱计划器">
         <aside class="control-panel" aria-label="筛选条件">
           <div class="field-group">
-            <label for="stage">孕期阶段</label>
+            <label for="stage">孕期月份</label>
             <select id="stage">
-              <option value="first">孕早期 1-12 周</option>
-              <option value="second" selected>孕中期 13-27 周</option>
-              <option value="third">孕晚期 28-40 周</option>
+              <option value="month1">孕1月</option>
+              <option value="month2">孕2月</option>
+              <option value="month3">孕3月</option>
+              <option value="month4" selected>孕4月</option>
+              <option value="month5">孕5月</option>
+              <option value="month6">孕6月</option>
+              <option value="month78">孕7-8月</option>
               <option value="postpartum">产后哺乳期</option>
-            </select>
-          </div>
-
-          <div class="field-group">
-            <label for="symptom">今天最想照顾</label>
-            <select id="symptom">
-              <option value="nausea">反胃/孕吐</option>
-              <option value="iron" selected>补铁和疲劳</option>
-              <option value="constipation">便秘</option>
-              <option value="heartburn">烧心</option>
-              <option value="quick">没时间做饭</option>
             </select>
           </div>
 
@@ -136,6 +129,43 @@
         </div>
       </section>
     </main>
+
+    <div id="setupModal" class="setup-modal" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+      <div class="setup-card">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Start</p>
+          <h2 id="setupTitle">先选一套默认菜单</h2>
+        </div>
+        <div class="setup-group">
+          <span class="label-text">孕期月份</span>
+          <div class="option-grid" data-options="stage">
+            <button class="option-chip" type="button" data-stage="month1">孕1月</button>
+            <button class="option-chip" type="button" data-stage="month2">孕2月</button>
+            <button class="option-chip" type="button" data-stage="month3">孕3月</button>
+            <button class="option-chip is-active" type="button" data-stage="month4">孕4月</button>
+            <button class="option-chip" type="button" data-stage="month5">孕5月</button>
+            <button class="option-chip" type="button" data-stage="month6">孕6月</button>
+            <button class="option-chip" type="button" data-stage="month78">孕7-8月</button>
+          </div>
+        </div>
+        <div class="setup-group">
+          <span class="label-text">菜单风格</span>
+          <div class="option-grid" data-options="profile">
+            <button class="option-chip" type="button" data-profile="balanced">日常均衡</button>
+            <button class="option-chip" type="button" data-profile="light">清淡开胃</button>
+            <button class="option-chip is-active" type="button" data-profile="iron">补铁高蛋白</button>
+            <button class="option-chip" type="button" data-profile="fiber">纤维顺畅</button>
+            <button class="option-chip" type="button" data-profile="quick">快手备餐</button>
+            <button class="option-chip" type="button" data-profile="lowSugar">控糖少油</button>
+          </div>
+        </div>
+        <div class="setup-group">
+          <label for="setupPantry">家里现有食材</label>
+          <input id="setupPantry" type="text" placeholder="例如：鸡蛋、米饭、番茄、虾仁" />
+        </div>
+        <button id="applySetup" class="primary-action" type="button">生成我的菜单</button>
+      </div>
+    </div>
 
     <script src="./app.js"></script>
   </body>

@@ -136,12 +136,86 @@ const extraMeals = {
   ]
 };
 
-const symptomBoosts = {
-  nausea: ["姜", "苏打饼", "香蕉", "米粥"],
-  iron: ["菠菜", "瘦牛肉", "扁豆", "橙子"],
-  constipation: ["梨", "燕麦", "奇亚籽", "豆类"],
-  heartburn: ["燕麦", "香蕉", "清汤", "少油烹调"],
-  quick: ["鸡蛋", "酸奶", "全麦吐司", "冷冻蔬菜"]
+const bookletMeals = {
+  first: [
+    meal("早餐", "水煮蛋甜玉米牛奶", 10, ["胆碱", "钙"], "参考月子式周菜单的基础早餐：水煮蛋、甜玉米和巴氏杀菌牛奶。", ["鸡蛋", "甜玉米", "牛奶"]),
+    meal("早餐", "杂粮馒头玉米粥", 12, ["能量", "温和"], "杂粮馒头搭配玉米粥，清淡耐饱。", ["杂粮馒头", "玉米", "米"]),
+    meal("早餐", "全麦欧包香蕉奶昔", 8, ["纤维", "钙"], "全麦欧包配香蕉牛奶奶昔，适合早晨快手。", ["全麦欧包", "香蕉", "牛奶"]),
+    meal("午餐", "虾仁炒西兰花米饭", 18, ["碘", "叶酸"], "虾仁彻底炒熟，搭配西兰花和米饭。", ["虾仁", "西兰花", "米饭"]),
+    meal("午餐", "番茄炒蛋丝瓜瘦肉汤", 22, ["胆碱", "蛋白质"], "番茄炒全熟蛋，搭配丝瓜瘦肉汤。", ["番茄", "鸡蛋", "丝瓜", "瘦肉"]),
+    meal("午餐", "红烧鸡腿白菜炖豆腐", 26, ["蛋白质", "钙"], "鸡腿烧熟后搭配白菜豆腐，适合配米饭。", ["鸡腿", "白菜", "豆腐", "米饭"]),
+    meal("晚餐", "小米粥西芹豆干香煎鱼", 24, ["DHA", "钙"], "小米粥配西芹豆干和熟煎鱼，晚餐不油腻。", ["小米", "西芹", "豆干", "鱼"]),
+    meal("晚餐", "二米粥香菇肉末豆腐", 22, ["蛋白质", "纤维"], "大米小米煮粥，配香菇肉末豆腐。", ["大米", "小米", "香菇", "肉末", "豆腐"]),
+    meal("加餐", "芝麻糊橙子核桃", 6, ["钙", "健康脂肪"], "芝麻糊配橙子和核桃，适合作为下午加餐。", ["芝麻糊", "橙子", "核桃"]),
+    meal("加餐", "银耳羹猕猴桃松子", 8, ["维 C", "温和"], "银耳羹搭配猕猴桃和松子，清爽补水。", ["银耳", "猕猴桃", "松子"])
+  ],
+  second: [
+    meal("早餐", "牛奶全麦面包水果黄瓜", 8, ["钙", "纤维"], "牛奶、全麦面包、水果和黄瓜，像打印食谱一样容易照做。", ["牛奶", "全麦面包", "水果", "黄瓜"]),
+    meal("早餐", "黑芝麻糊红薯水煮蛋", 10, ["钙", "胆碱"], "黑芝麻糊搭配红薯和水煮蛋，适合孕中期早餐。", ["黑芝麻糊", "红薯", "鸡蛋"]),
+    meal("早餐", "蔬菜包燕麦南瓜粥", 16, ["纤维", "能量"], "蔬菜包配燕麦南瓜粥，饱腹但不厚重。", ["蔬菜包", "燕麦", "南瓜"]),
+    meal("午餐", "青菜肉片面酸辣土豆丝", 20, ["蛋白质", "维 C"], "青菜肉片面搭配酸辣土豆丝，酸辣调味要适量。", ["青菜", "瘦肉", "面条", "土豆"]),
+    meal("午餐", "二米饭虾仁豆腐冬瓜汤", 22, ["碘", "钙"], "大米小米饭配虾仁豆腐和冬瓜汤。", ["大米", "小米", "虾仁", "豆腐", "冬瓜"]),
+    meal("午餐", "杂粮饭番茄土豆牛腩", 28, ["铁", "蛋白质"], "牛腩炖到软烂，配番茄土豆和杂粮饭。", ["杂粮", "番茄", "土豆", "牛腩"]),
+    meal("晚餐", "山药牛肉粥香菇油菜", 24, ["铁", "温和"], "山药牛肉粥搭配香菇油菜，晚餐温和。", ["山药", "牛肉", "香菇", "油菜"]),
+    meal("晚餐", "黑米饭土豆炖排骨清炒菜心", 28, ["铁", "蛋白质"], "排骨彻底炖熟，配黑米饭和清炒菜心。", ["黑米", "土豆", "排骨", "菜心"]),
+    meal("加餐", "酸奶鸡蛋饼松子", 10, ["钙", "胆碱"], "巴氏杀菌酸奶配全熟鸡蛋饼和少量松子。", ["酸奶", "鸡蛋", "松子"]),
+    meal("加餐", "南瓜小米粥猕猴桃", 16, ["纤维", "维 C"], "南瓜小米粥配猕猴桃，清淡好入口。", ["南瓜", "小米", "猕猴桃"])
+  ],
+  third: [
+    meal("早餐", "鲜肉包燕麦南瓜粥清炒生菜", 18, ["蛋白质", "纤维"], "鲜肉包配燕麦南瓜粥和清炒生菜，肉馅完全蒸熟。", ["鲜肉包", "燕麦", "南瓜", "生菜"]),
+    meal("早餐", "牛奶燕麦粥荷包蛋", 12, ["钙", "胆碱"], "牛奶燕麦粥配全熟荷包蛋，简单稳定。", ["牛奶", "燕麦", "鸡蛋"]),
+    meal("午餐", "米饭炒菜心清蒸鲈鱼", 22, ["DHA", "叶酸"], "清蒸鲈鱼配米饭和炒菜心，鱼肉完全熟透。", ["米饭", "菜心", "鲈鱼"]),
+    meal("午餐", "虾仁蘑菇汤红烧鸡腿", 28, ["碘", "蛋白质"], "虾仁蘑菇汤搭配红烧鸡腿，口味更像家常周菜单。", ["虾仁", "蘑菇", "鸡腿"]),
+    meal("晚餐", "玉米瘦肉粥花卷清炒茼蒿", 22, ["蛋白质", "补水"], "玉米瘦肉粥配花卷和清炒茼蒿。", ["玉米", "瘦肉", "花卷", "茼蒿"]),
+    meal("晚餐", "荞麦面蛤蜊蒸蛋红烧带鱼", 26, ["碘", "胆碱"], "蛤蜊蒸蛋和红烧带鱼都要彻底熟透。", ["荞麦面", "蛤蜊", "鸡蛋", "带鱼"]),
+    meal("加餐", "无糖酸奶草莓瓜子", 6, ["钙", "维 C"], "无糖酸奶配草莓和瓜子，适合控糖少油。", ["无糖酸奶", "草莓", "瓜子"]),
+    meal("加餐", "水煮蛋金桔雪梨汤腰果", 12, ["胆碱", "补水"], "水煮蛋配金桔雪梨汤和少量腰果。", ["鸡蛋", "金桔", "雪梨", "腰果"])
+  ],
+  postpartum: []
+};
+
+const menuProfiles = {
+  balanced: {
+    label: "日常均衡",
+    focus: "按月龄默认均衡菜单",
+    boosts: ["牛奶", "鸡蛋", "米饭", "豆腐", "青菜"]
+  },
+  light: {
+    label: "清淡开胃",
+    focus: "清淡开胃 + 少量多餐",
+    boosts: ["小米", "南瓜", "番茄", "黄瓜", "冬瓜", "苹果"]
+  },
+  iron: {
+    label: "补铁高蛋白",
+    focus: "铁 + 优质蛋白 + 维 C",
+    boosts: ["瘦牛肉", "牛肉", "菠菜", "扁豆", "橙子", "红薯"]
+  },
+  fiber: {
+    label: "纤维顺畅",
+    focus: "纤维 + 补水 + 温和主食",
+    boosts: ["燕麦", "梨", "红薯", "玉米", "杂粮", "青菜"]
+  },
+  quick: {
+    label: "快手备餐",
+    focus: "快手备餐 + 少洗少切",
+    boosts: ["鸡蛋", "牛奶", "全麦面包", "酸奶", "米饭", "豆腐"]
+  },
+  lowSugar: {
+    label: "控糖少油",
+    focus: "无糖酸奶 + 杂粮主食 + 少油烹调",
+    boosts: ["无糖酸奶", "杂粮", "燕麦", "黄瓜", "青菜", "豆腐"]
+  }
+};
+
+const monthProfiles = {
+  month1: { label: "孕1月", group: "first", profile: "light", focus: "孕1月：清淡开胃 + 叶酸 + 少量多餐" },
+  month2: { label: "孕2月", group: "first", profile: "light", focus: "孕2月：缓解反胃 + 清淡蛋白" },
+  month3: { label: "孕3月", group: "first", profile: "balanced", focus: "孕3月：清淡均衡 + 蛋白质" },
+  month4: { label: "孕4月", group: "second", profile: "iron", focus: "孕4月：补铁 + 蛋白质 + 维 C" },
+  month5: { label: "孕5月", group: "second", profile: "fiber", focus: "孕5月：钙 + 铁 + 纤维" },
+  month6: { label: "孕6月", group: "third", profile: "balanced", focus: "孕6月：蛋白质 + DHA + 稳定能量" },
+  month78: { label: "孕7-8月", group: "third", profile: "lowSugar", focus: "孕7-8月：控糖少油 + 消化舒适" },
+  postpartum: { label: "产后哺乳期", group: "postpartum", profile: "balanced", focus: "产后哺乳期：补水 + 蛋白质 + 温和能量" }
 };
 
 const dietSwaps = {
@@ -163,8 +237,8 @@ const safetyItems = [
 ];
 
 const state = {
-  stage: "second",
-  symptom: "iron",
+  stage: "month4",
+  profile: "iron",
   diet: "balanced",
   fishCount: 2,
   quickOnly: false,
@@ -173,7 +247,6 @@ const state = {
 };
 
 const stageSelect = document.querySelector("#stage");
-const symptomSelect = document.querySelector("#symptom");
 const pantryInput = document.querySelector("#pantry");
 const rerollPlan = document.querySelector("#rerollPlan");
 const quickOnly = document.querySelector("#quickOnly");
@@ -185,6 +258,9 @@ const fishCount = document.querySelector("#fishCount");
 const shoppingList = document.querySelector("#shoppingList");
 const safeSearch = document.querySelector("#safeSearch");
 const safetyList = document.querySelector("#safetyList");
+const setupModal = document.querySelector("#setupModal");
+const setupPantry = document.querySelector("#setupPantry");
+const applySetup = document.querySelector("#applySetup");
 let renderedMeals = [];
 
 function meal(slot, title, minutes, tags, description, ingredients) {
@@ -200,8 +276,9 @@ function safe(name, status, note, amount = "") {
 }
 
 function renderMeals() {
-  const base = mealBank[state.stage];
-  const boost = symptomBoosts[state.symptom];
+  const month = getMonthProfile();
+  const base = mealBank[month.group];
+  const boost = getActiveBoosts();
   const pantryMode = state.pantry.length > 0;
   const sourceDays = pantryMode ? buildPantryDays() : buildStageDays();
   const days = sourceDays.map((plan) => ({
@@ -214,7 +291,7 @@ function renderMeals() {
   const meals = days.flatMap((plan) => plan.meals);
   renderedMeals = meals;
 
-  focusText.textContent = pantryMode ? `优先使用：${state.pantry.join("、")}` : base.focus;
+  focusText.textContent = pantryMode ? `${month.label} · 优先使用：${state.pantry.join("、")}` : `${month.label} · ${getActiveFocus()}`;
   timeText.textContent = `${meals.reduce((sum, item) => sum + item.minutes, 0)} 分钟`;
   coverageText.textContent = pantryMode ? `${meals.reduce((sum, item) => sum + item.matches.length, 0)} 次命中` : `${new Set(meals.flatMap((item) => item.tags)).size} 项`;
   fishCount.textContent = state.fishCount;
@@ -276,8 +353,9 @@ function buildPantryDays() {
 }
 
 function buildStageDays() {
-  const pool = getStageMeals(state.stage)
-    .map((item) => ({ ...item, stage: state.stage, score: 0 }))
+  const month = getMonthProfile();
+  const pool = getStageMeals(month.group)
+    .map((item) => ({ ...item, stage: month.group, score: 0 }))
     .filter((item) => !state.quickOnly || item.minutes <= 20);
 
   return buildDaysFromPool(pool);
@@ -309,15 +387,37 @@ function getAllMeals() {
 }
 
 function getStageMeals(stage) {
-  return mealBank[stage].days.flatMap((dayPlan) => dayPlan.meals).concat(extraMeals[stage] || []);
+  return mealBank[stage].days
+    .flatMap((dayPlan) => dayPlan.meals)
+    .concat(extraMeals[stage] || [])
+    .concat(bookletMeals[stage] || []);
 }
 
 function scoreMeal(item) {
   const matches = getMatches(item.ingredients, state.pantry).length;
-  const symptomMatches = item.ingredients.filter((ingredient) => symptomBoosts[state.symptom].includes(ingredient)).length;
-  const stageScore = item.stage === state.stage ? 1.5 : 0;
+  const profileMatches = item.ingredients.filter((ingredient) => getActiveBoosts().includes(ingredient)).length;
+  const stageScore = item.stage === getMonthProfile().group ? 1.5 : 0;
   const quickScore = item.minutes <= 20 ? 0.5 : 0;
-  return matches * 8 + symptomMatches * 2 + stageScore + quickScore;
+  return matches * 8 + profileMatches * 2 + stageScore + quickScore;
+}
+
+function getMonthProfile() {
+  return monthProfiles[state.stage] || monthProfiles.month4;
+}
+
+function getActiveProfile() {
+  return menuProfiles[state.profile] || menuProfiles[getMonthProfile().profile] || menuProfiles.balanced;
+}
+
+function getActiveBoosts() {
+  return getActiveProfile().boosts;
+}
+
+function getActiveFocus() {
+  if (state.profile === getMonthProfile().profile) {
+    return getMonthProfile().focus;
+  }
+  return getActiveProfile().focus;
 }
 
 function getMatches(ingredients, pantry) {
@@ -364,12 +464,7 @@ function renderSafety() {
 
 stageSelect.addEventListener("change", (event) => {
   state.stage = event.target.value;
-  state.planSeed = 0;
-  renderMeals();
-});
-
-symptomSelect.addEventListener("change", (event) => {
-  state.symptom = event.target.value;
+  state.profile = getMonthProfile().profile;
   state.planSeed = 0;
   renderMeals();
 });
@@ -411,13 +506,55 @@ document.querySelector("#fishPlus").addEventListener("click", () => {
   renderMeals();
 });
 
+document.querySelectorAll(".option-grid").forEach((group) => {
+  group.addEventListener("click", (event) => {
+    const button = event.target.closest(".option-chip");
+    if (!button) {
+      return;
+    }
+    group.querySelectorAll(".option-chip").forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+  });
+});
+
+document.querySelector("[data-options='stage']").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-stage]");
+  if (!button) {
+    return;
+  }
+  state.stage = button.dataset.stage;
+  stageSelect.value = state.stage;
+  state.profile = getMonthProfile().profile;
+  const defaultProfileButton = document.querySelector(`[data-profile='${state.profile}']`);
+  if (defaultProfileButton) {
+    document.querySelectorAll("[data-profile]").forEach((item) => item.classList.remove("is-active"));
+    defaultProfileButton.classList.add("is-active");
+  }
+});
+
+document.querySelector("[data-options='profile']").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-profile]");
+  if (!button) {
+    return;
+  }
+  state.profile = button.dataset.profile;
+});
+
+applySetup.addEventListener("click", () => {
+  state.pantry = parsePantry(setupPantry.value);
+  pantryInput.value = setupPantry.value;
+  state.planSeed = 0;
+  setupModal.classList.add("is-hidden");
+  renderMeals();
+});
+
 mealGrid.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-add]");
   const swapButton = event.target.closest("[data-swap]");
 
   if (addButton) {
     const meal = renderedMeals.find((item) => item.title === addButton.dataset.add);
-    const items = collectIngredients([meal], symptomBoosts[state.symptom]);
+    const items = collectIngredients([meal], getActiveBoosts());
     shoppingList.innerHTML = items.map(([name, count]) => `<li><strong>${name}</strong><span>${count > 1 ? `${count} 份` : "1 份"}</span></li>`).join("");
   }
 
