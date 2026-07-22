@@ -306,20 +306,22 @@ function renderMeals() {
         ${plan.meals.map((item) => `
           <article class="meal-card">
             <div class="meal-top">
+              <span class="meal-slot">${item.slot}</span>
               <div>
-                <span class="meal-slot">${item.slot}</span>
                 <h3>${item.title}</h3>
+                <span class="meal-meta">${item.minutes} 分钟${item.matches.length ? ` · 已有 ${item.matches.join("、")}` : ""}</span>
               </div>
-              <span class="time-pill">${item.minutes}m</span>
-            </div>
-            <p>${item.description}</p>
-            <div class="tags">
-              ${item.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-              ${item.matches.map((tag) => `<span class="tag match">已有 ${tag}</span>`).join("")}
             </div>
             ${item.missing.length && pantryMode ? `<span class="missing-note">还需：${item.missing.slice(0, 4).join("、")}</span>` : ""}
+            <details class="meal-details">
+              <summary>营养与说明</summary>
+              <p>${item.description}</p>
+              <div class="tags">
+                ${item.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+              </div>
+            </details>
             <div class="card-actions">
-              <button class="action-button" type="button" data-add="${item.title}">加入清单</button>
+              <button class="action-button" type="button" data-add="${item.title}">清单</button>
               <button class="action-button" type="button" data-swap="${item.title}">替换建议</button>
             </div>
           </article>
